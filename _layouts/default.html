@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Ryan Jones{%if page.title%} | {{page.title}}{%endif%}</title>
+		<link rel="stylesheet" href="/main.css">
+	</head>
+	<body>
+		<div class = "header">
+			<div class = "headertitle">
+				Ryan Jones
+			</div>
+			<div class = "headersubtitle">
+				Freelance Developer
+			</div>
+		</div>
+		<div class = "headernavbar">
+			<a href="/"{%if page.cat == 'about'%} class="current"{%endif%}>About</a>
+			<a href="/testimonials/" {%if page.cat == 'testimonials'%} class="current"{%endif%}>Testimonials</a>
+			<a href="/projects/" {%if page.cat == 'projects'%} class="current"{%endif%}>Projects</a>
+		</div>
+		<div class = "content">
+			{{content}}
+		</div>
+	</body>
+</html>

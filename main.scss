@@ -1,0 +1,179 @@
+---
+
+---
+//fonts
+@font-face{
+	font-family: gotham-r-book;
+	src: url('/fonts/Gotham-Book.otf');
+}
+@font-face{
+	font-family: gotham-r-book-i;
+	src: url('/fonts/Gotham-Book.otf');
+}
+@font-face{
+	font-family: gotham-r-bold;
+	src: url('/fonts/Gotham-Ultra.otf');
+}
+@font-face{
+	font-family: gotham-r;
+	src: url('/fonts/Gotham-Medium.otf');
+}
+@font-face{
+	font-family: gotham-r-i;
+	src: url('/fonts/Gotham-MediumItalic.otf');
+}
+@font-face{
+	font-family: gotham-r-light-italic;
+	src: url('/fonts/Gotham-LightItalic.otf');
+}
+@font-face{
+	font-family: andes;
+	src: url('/fonts/Andes.ttf');
+}
+@font-face{
+	font-family: gotham-light;
+	src: url('/fonts/Gotham-Light.otf');
+}
+//variables
+$darkblue: #00006b;
+$grayblue: #7f7fb5;
+$whiteblue: #e5e5f0;
+$darktrans: rgba(0,0,0,.5);
+//$darkertrans: rgba(0,0,0,.75);
+$darker: #333;
+$gold: #ffcc00;
+$darkgold: #e5b700;
+$mainfontcolor: #eee;
+
+//styling
+html{
+	min-height: 100vh;
+}
+body{
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	padding: 0;
+	margin:  0;
+	border: 0;
+	min-height: 100vh;
+	font-family: gotham-book;
+	background-image: url('/img/bg.png');
+}
+.clean{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+.header, .content, .footer, .headernavbar{
+	width:50%;
+	max-width: 1024px;
+	min-width: 512px;
+	margin: 0 auto;
+}
+
+.content, .footer, .headernavbar{
+	box-shadow: 0 0 1em black;
+}
+
+.header{
+	//background-color: $darktrans;
+	color: $mainfontcolor;
+	margin-bottom: 1em;
+	text-shadow: 0 0 .25em black;
+	.headertitle{
+		font-family: andes;
+		font-size: 2.5em;
+		text-align: center;
+		padding-top: 1em;
+		padding-bottom: .2em;
+		font-weight: bold;
+		color: $gold;
+	}
+	.headersubtitle{
+		font-family: andes;
+		font-size: 1.75em;
+		text-align: center;
+		padding-bottom: 1em;
+		color: $darkgold;
+	}
+}
+.headernavbar{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	margin: 0 auto 1em auto;
+	a{
+		display: block;
+		text-align: center;
+		font-family: gotham-r;
+		color: $mainfontcolor;
+		text-decoration: none;
+		background-color: $darker;
+		font-size: 1.2em;
+		padding:.1em 0;
+	}
+	a:hover, a.current:hover{
+		color: $gold;
+		background-color: $darker;
+	}
+	a.current{
+		color: $darkgold;
+	}
+}
+
+
+
+.content{
+	background-color: $darker;
+	color: $mainfontcolor;
+	text-align: justify;
+	font-family: gotham-light;
+	box-sizing: border-box;
+	padding: 1em;
+}
+
+//testimonial stuff
+
+.testimonial{
+	.quote{
+		color: $darkgold;
+		font-weight: bold;
+	}
+	.testimonialname{
+		font-size: 1.5em;
+		text-indent: 2em;
+		.testimonialnamename{
+			color: $gold;
+			font-family: andes;
+		}
+		.testimonialnamepos{
+			color: $darkgold;
+		}
+	}
+}
+
+//projects stuff
+
+.col2grid{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 1em;
+}
+.project{
+	img{
+		width:100%;
+		height:auto;
+		margin-bottom: 5px;
+	}
+	a{
+		font-size: 1.5em;
+		color: $darkgold;
+		font-family: andes;
+		text-decoration: none;
+	}
+	a:hover{
+		color: $gold;
+	}
+}
