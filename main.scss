@@ -137,6 +137,7 @@ body{
 //testimonial stuff
 
 .testimonial{
+	padding-bottom: .5em;
 	.quote{
 		color: $darkgold;
 		font-weight: bold;
@@ -152,6 +153,9 @@ body{
 			color: $darkgold;
 		}
 	}
+}
+.testimonial:last-of-type{
+	padding-bottom: 0;
 }
 
 //projects stuff
